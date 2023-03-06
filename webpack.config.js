@@ -21,10 +21,15 @@ module.exports = {
     }, 
 
     plugins: [
-        new HtmlWebpackPlugin(),
+        new HtmlWebpackPlugin( {
+            title: 'webpack-config',
+            template: './src/index.html'
+        } ),
     ],
 
     devServer: {
         port: 8088,
+        liveReload: true,
+        hot:false,
     }
 }
