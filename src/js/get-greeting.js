@@ -1,3 +1,4 @@
+import '../css/get-greeting.css';
 
 export const getGreeting = ( name ) => {
     const h2 = document.createElement( 'h2' );
