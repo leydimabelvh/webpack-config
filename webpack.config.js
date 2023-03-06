@@ -1,9 +1,14 @@
+const HtmlWebpackPlugin = require( 'html-webpack-plugin' );
+
 module.exports = {
-    mode: '',
+    mode: 'development',
 
     module: {
         rules: [
-
+            {
+                test: /\.html$/,
+                loader: 'html-loader',
+            }
         ]
     },
     
@@ -16,7 +21,7 @@ module.exports = {
     }, 
 
     plugins: [
-
+        new HtmlWebpackPlugin(),
     ],
 
     devServer: {
